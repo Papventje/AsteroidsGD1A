@@ -6,10 +6,16 @@ public class PlayerMovement : MonoBehaviour
 
     public float speed;
 
+    public bool movement = true;
+
     private Rigidbody _rigidbody;
     private Vector3 _direction;
 
 
+    void Start()
+    {
+
+    }
 
     void Awake()
     {
@@ -18,22 +24,23 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        float x = Input.GetAxisRaw("Horizontal");
-        float z = Input.GetAxisRaw("Vertical");
-        _direction = new Vector3(x, 0f, z);
+        if (movement) {
+            float x = Input.GetAxisRaw("Horizontal");
+            float z = Input.GetAxisRaw("Vertical");
+            _direction = new Vector3(x, 0f, z);
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        Plane plane = new Plane(Vector3.up, Vector3.zero);
-        float distance;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Plane plane = new Plane(Vector3.up, Vector3.zero);
+            float distance;
 
-        if (plane.Raycast(ray, out distance))
-        {
-            Vector3 point = ray.GetPoint(distance);
-            Vector3 adjustedHeightPoint = new Vector3(point.x, transform.position.y, point.z);
-            transform.LookAt(adjustedHeightPoint);
+            if (plane.Raycast(ray, out distance))
+            {
+                Vector3 point = ray.GetPoint(distance);
+                Vector3 adjustedHeightPoint = new Vector3(point.x, transform.position.y, point.z);
+                transform.LookAt(adjustedHeightPoint);
+            }
+
         }
-
-
     }
 
     void FixedUpdate()
@@ -48,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("PU1"))
         {
             Destroy(other.gameObject);
+            gameObject.GetComponent<PlayerHealth>().playerLives += 1;
         }
         if (other.CompareTag("PU2"))
         {

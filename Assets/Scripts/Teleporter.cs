@@ -7,6 +7,17 @@ public class Teleporter : MonoBehaviour {
 
     public Transform tp1;
     public Transform tp2;
+    public Transform platform1;
+    public Transform platform2;
+
+    public PlayerMovement player;
+    private int waitTime = 2;
+
+    void Start()
+    {
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        player = p.GetComponent<PlayerMovement>();
+    }
 
     void Update()
     {
@@ -27,12 +38,12 @@ public class Teleporter : MonoBehaviour {
     {
         if (other.CompareTag("TP1") && tpSpace == true)
         {
-            transform.position = new Vector3(tp2.position.x, tp2.position.y + 2.67f, tp2.position.z + 2);
+            transform.position = new Vector3(platform1.position.x, platform1.position.y + 2.67f, platform1.position.z);
             //cooldown()
         }
         if (other.CompareTag("TP2") && tpSpace == true)
         {
-            transform.position = new Vector3(tp1.position.x, tp1.position.y + 2.67f, tp1.position.z + 2);
+            transform.position = new Vector3(platform2.position.x, platform2.position.y + 2.67f, platform2.position.z);
             //cooldown()
 
         }
