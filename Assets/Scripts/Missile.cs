@@ -1,10 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class Missile : MonoBehaviour
 {
 
     private float speed = 20;
+    private int scoreAmount;
 
     void Start()
     {

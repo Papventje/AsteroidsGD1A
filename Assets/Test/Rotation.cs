@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Rotation : MonoBehaviour {
 
+    [SerializeField]
+    private int rotateSpeed;
     private Rigidbody rb;
 
     void Start()
@@ -11,29 +13,29 @@ public class Rotation : MonoBehaviour {
     }
 	void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKey(KeyCode.W))
         {
-            rb.transform.Rotate(0, 90, 0);
+            rb.transform.eulerAngles = new Vector3(0, 0, 0);
         }
-        if (Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKey(KeyCode.D))
         {
-            rb.transform.Rotate(0, -90, 0);
+            rb.transform.eulerAngles = new Vector3(0, 90, 0);
         }
-        if (Input.GetKeyDown(KeyCode.A))
+        
+        if (Input.GetKey(KeyCode.A))
         {
-            rb.transform.Rotate(0, 270, 0);
+            rb.transform.eulerAngles = new Vector3(0, 270, 0);
         }
-        if (Input.GetKeyUp(KeyCode.A))
+        
+        if (Input.GetKey(KeyCode.S))
         {
-            rb.transform.Rotate(0, -270, 0);
+            rb.transform.eulerAngles = new Vector3(0, 180, 0);
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if(Input.GetKey(KeyCode.W)&& Input.GetKeyDown(KeyCode.D))
         {
-            rb.transform.Rotate(0, 180, 0);
+            rb.transform.eulerAngles = new Vector3(0, 45, 0);
         }
-        if (Input.GetKeyUp(KeyCode.S))
-        {
-            rb.transform.Rotate(0, -180, 0);
-        }
+        
+        
     }
 }

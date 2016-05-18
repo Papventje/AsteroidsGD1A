@@ -2,8 +2,7 @@
 using System.Collections;
 
 public class TestMovement : MonoBehaviour {
-
-    [SerializeField]
+    
     private float rotationSpeed;
     private Rigidbody rb;
     private Vector3 _direction;
@@ -20,10 +19,11 @@ public class TestMovement : MonoBehaviour {
         float x = Input.GetAxisRaw("Horizontal");
         float z = Input.GetAxisRaw("Vertical");
         _direction = new Vector3(x, 0f, z);
-       /* if (Input.GetKeyDown(KeyCode.W))
-        {
-            rb.transform.Rotate(0, 45, 0);
-        }*/
+        /* if (Input.GetKeyDown(KeyCode.W))
+         {
+             rb.transform.Rotate(0, 45, 0);
+         }*/
+        
     }
 
     void FixedUpdate()
