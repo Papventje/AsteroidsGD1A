@@ -12,16 +12,12 @@ public class Spawn : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            Score.scoreInt += 220;
-        }
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         amount = enemies.Length;
 
         if (amount != 15)
         {
-            InvokeRepeating("spawnEnemy", 5f -(Score.scoreInt / 150), 10f);
+            InvokeRepeating("spawnEnemy", 4f -(Score.scoreInt / 150), 10f);
         }
     }
      void spawnEnemy()

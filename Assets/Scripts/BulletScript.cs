@@ -1,15 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
 
-public class Missile : MonoBehaviour
+public class BulletScript : MonoBehaviour
 {
 
     private float speed = 20;
 
     void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 10f);
     }
     // Update is called once per frame
     void Update()
@@ -19,10 +18,6 @@ public class Missile : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-        }
         if (other.CompareTag("Wall"))
         {
             Destroy(gameObject);
