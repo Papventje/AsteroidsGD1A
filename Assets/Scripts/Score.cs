@@ -10,6 +10,8 @@ public class Score : MonoBehaviour {
     public bool unlock1 = true;
     public bool unlock2 = false;
 
+
+
     // Use this for initialization
     void Start () {
         unlock1 = true;
@@ -19,13 +21,14 @@ public class Score : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         scoreText.text = "Score: " + scoreInt;
-       
+
         if(scoreInt >= 50)
         {
             unlock1 = false;
             unlock2 = true;
         }
-    }
+			
+	}
 
     public static void IncreaseScore(int Amount)
     {
