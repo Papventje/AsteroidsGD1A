@@ -11,6 +11,7 @@ public class Score : MonoBehaviour {
     public bool unlock2 = false;
     public bool unlock3 = false;
     public bool unlock4 = false;
+    public bool unlock5 = false;
 
     // Use this for initialization
     void Start () {
@@ -18,6 +19,7 @@ public class Score : MonoBehaviour {
         unlock2 = false;
         unlock3 = false;
         unlock4 = false;
+        unlock5 = false;
     }
 	
 	// Update is called once per frame

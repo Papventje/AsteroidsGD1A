@@ -2,21 +2,26 @@
 using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class EnemyHealth : MonoBehaviour
 {
-
+    public AudioClip enemyDeath;
+    private AudioSource source;
 
     public float enemyHealth;
 
     void Start()
     {
-        enemyHealth = 120f;
+
+        source = GetComponent<AudioSource>();
+        enemyHealth = (60f + Score.scoreInt / 5);
     }
 
     void Update()
     {
         if (enemyHealth <= 0)
         {
+            source.PlayOneShot(enemyDeath, 1f);
             Destroy(gameObject);
             Score.IncreaseScore(10);
         }
@@ -31,7 +36,7 @@ public class EnemyHealth : MonoBehaviour
         }
         if (other.CompareTag("Missile2"))
         {
-            enemyHealth -= 20;
+            enemyHealth -= 15;
         }
     }
     

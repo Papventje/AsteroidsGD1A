@@ -5,7 +5,6 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public float speed;
-
     public bool movement = true;
 
     private Rigidbody _rigidbody;
@@ -55,11 +54,13 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("PU1"))
         {
             Destroy(other.gameObject);
-            gameObject.GetComponent<PlayerHealth>().playerLives += 1;
+            //gameObject.GetComponent<PlayerHealth>().playerLives += 1;
+            PlayerHealth.playerLives += 1;
         }
         if (other.CompareTag("PU2"))
         {
             Destroy(other.gameObject);
+            //StartCoroutine(Repawnshielddinges);
         }
         if (other.CompareTag("PU3"))
         {
@@ -67,5 +68,6 @@ public class PlayerMovement : MonoBehaviour
             speed += 1;
         }
     }
+
 
 }

@@ -15,16 +15,16 @@ public class Spawn : MonoBehaviour
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         amount = enemies.Length;
 
-        if (amount != 15)
+        if (amount != 5)
         {
-            InvokeRepeating("spawnEnemy", 4f -(Score.scoreInt / 150), 10f);
+            InvokeRepeating("spawnEnemy", 5f /*-(Score.scoreInt / 150)*/, 10f);
         }
     }
      void spawnEnemy()
     {
-        spawnPoint.x = 0f;
+        spawnPoint.x = 43f;
         spawnPoint.y = 5f;
-        spawnPoint.z = 10f;
+        spawnPoint.z = 38f;
 
         Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length  -1)], spawnPoint, Quaternion.identity);
         CancelInvoke();

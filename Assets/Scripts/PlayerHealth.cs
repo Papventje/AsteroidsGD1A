@@ -5,7 +5,7 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-    public int playerLives;
+    public static int playerLives;
     public Text Lives;
     public float sec = 5f;
 
@@ -24,7 +24,6 @@ public class PlayerHealth : MonoBehaviour {
         {
             playerLives -= 1;
             Respawn();
-            shield.SetActive(true);
             StartCoroutine(RespawnTime());
 
             //Debug.Log(playerLives);
@@ -34,8 +33,9 @@ public class PlayerHealth : MonoBehaviour {
     void Update()
     {
         Lives.text = "Lives: " + playerLives;
-        if(playerLives == 0)
+        if(playerLives <= 0)
         {
+            Score.scoreInt = 0;
             SceneManager.LoadScene("End");
         }
     }
@@ -48,6 +48,7 @@ public class PlayerHealth : MonoBehaviour {
 
     IEnumerator RespawnTime()
     {
+        shield.SetActive(true);
         yield return new WaitForSeconds(sec);
         shield.SetActive(false);
 
