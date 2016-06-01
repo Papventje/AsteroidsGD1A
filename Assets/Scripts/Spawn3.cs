@@ -10,16 +10,16 @@ public class Spawn3 : MonoBehaviour
 
 	private Vector3 spawnPoint;
 
-	void Update()
-	{
-		enemies = GameObject.FindGameObjectsWithTag("Enemy");
-		amount = enemies.Length;
+    void Update()
+    {
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        amount = enemies.Length;
 
-		if (amount != 5)
-		{
-			InvokeRepeating("spawnEnemy", 5f /*-(Score.scoreInt / 150)*/, 10f);
-		}
-	}
+        if (amount != 5)
+        {
+            InvokeRepeating("spawnEnemy", 5f /*-(Score.scoreInt / 150)*/, 10f);
+        }
+    }
 	void spawnEnemy()
 	{
 		spawnPoint.x = -33f;

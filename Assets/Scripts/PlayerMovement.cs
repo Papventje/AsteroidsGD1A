@@ -65,9 +65,16 @@ public class PlayerMovement : MonoBehaviour
         if (other.CompareTag("PU3"))
         {
             Destroy(other.gameObject);
-            speed += 1;
+            //speed += 1;
+            StartCoroutine(SpeedBuff());
         }
     }
 
+    IEnumerator SpeedBuff()
+    {
+        speed += 3;
+        yield return new WaitForSeconds(3f);
+        speed -= 3;
+    }
 
 }

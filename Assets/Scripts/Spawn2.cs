@@ -12,6 +12,7 @@ public class Spawn2 : MonoBehaviour
 
 	void Update()
 	{
+
 		enemies = GameObject.FindGameObjectsWithTag("Enemy");
 		amount = enemies.Length;
 
@@ -20,6 +21,7 @@ public class Spawn2 : MonoBehaviour
             InvokeRepeating("spawnEnemy", 5f /*-(Score.scoreInt / 150)*/, 10f);
         }
     }
+
 	void spawnEnemy()
 	{
 		spawnPoint.x = 43f;

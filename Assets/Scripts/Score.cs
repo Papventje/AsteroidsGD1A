@@ -13,6 +13,8 @@ public class Score : MonoBehaviour {
     public bool unlock4 = false;
     public bool unlock5 = false;
 
+
+
     // Use this for initialization
     void Start () {
         unlock1 = true;
@@ -29,7 +31,7 @@ public class Score : MonoBehaviour {
             scoreInt += 50;
         }
         scoreText.text = "Score: " + scoreInt;
-       
+
         if(scoreInt >= 50)
         {
             unlock1 = false;
