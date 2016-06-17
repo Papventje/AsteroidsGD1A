@@ -23,11 +23,11 @@ public class EnemyMovement : MonoBehaviour
         }
         if(targeting == false)
         {
-            _navMeshAgent.enabled = false;
+            _navMeshAgent.speed = 0;
         }
         if(targeting == true)
         {
-            _navMeshAgent.enabled = true;
+            _navMeshAgent.speed = 5;
         }
     }
 }

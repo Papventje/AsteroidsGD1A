@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: cba8b4ec939e35542a031f838b70416d
+timeCreated: 1466165987
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: CINEMA_4D_Editor
+    100002: Cylinder
+    100004: Cylinder_1
+    100006: Cylinder_2
+    100008: Cylinder_3
+    100010: Cylinder_4
+    100012: Cylinder_5
+    100014: //RootNode
+    100016: Lensflare_Source
+    100018: Lensflare_Source_2
+    100020: Moon
+    100022: Moon_2
+    100024: Moon_Light
+    100026: Moon_Light_2
+    100028: Null
+    100030: Null_Robot_Head_Cube_1_1
+    100032: Null_Robot_Head_Cube_1_1_MeshPart0
+    100034: Null_Robot_Head_Cube_1_1_MeshPart1
+    100036: Physical_Sky
+    100038: Physical_Sky_2
+    100040: Shadow_Plane
+    100042: Shadow_Plane_2
+    100044: Sky_Dome
+    100046: Sky_Dome_2
+    100048: Sky_Null
+    100050: Sky_Null_2
+    100052: Sphere
+    100054: Sphere_1
+    100056: Sun
+    100058: Sun_2
+    100060: Sun_light
+    100062: Sun_light_2
+    400000: CINEMA_4D_Editor
+    400002: Cylinder
+    400004: Cylinder_1
+    400006: Cylinder_2
+    400008: Cylinder_3
+    400010: Cylinder_4
+    400012: Cylinder_5
+    400014: //RootNode
+    400016: Lensflare_Source
+    400018: Lensflare_Source_2
+    400020: Moon
+    400022: Moon_2
+    400024: Moon_Light
+    400026: Moon_Light_2
+    400028: Null
+    400030: Null_Robot_Head_Cube_1_1
+    400032: Null_Robot_Head_Cube_1_1_MeshPart0
+    400034: Null_Robot_Head_Cube_1_1_MeshPart1
+    400036: Physical_Sky
+    400038: Physical_Sky_2
+    400040: Shadow_Plane
+    400042: Shadow_Plane_2
+    400044: Sky_Dome
+    400046: Sky_Dome_2
+    400048: Sky_Null
+    400050: Sky_Null_2
+    400052: Sphere
+    400054: Sphere_1
+    400056: Sun
+    400058: Sun_2
+    400060: Sun_light
+    400062: Sun_light_2
+    2300000: Cylinder
+    2300002: Cylinder_1
+    2300004: Cylinder_2
+    2300006: Cylinder_3
+    2300008: Cylinder_4
+    2300010: Cylinder_5
+    2300012: Null_Robot_Head_Cube_1_1_MeshPart0
+    2300014: Null_Robot_Head_Cube_1_1_MeshPart1
+    2300016: Sphere
+    2300018: Sphere_1
+    3300000: Cylinder
+    3300002: Cylinder_1
+    3300004: Cylinder_2
+    3300006: Cylinder_3
+    3300008: Cylinder_4
+    3300010: Cylinder_5
+    3300012: Null_Robot_Head_Cube_1_1_MeshPart0
+    3300014: Null_Robot_Head_Cube_1_1_MeshPart1
+    3300016: Sphere
+    3300018: Sphere_1
+    4300000: Null_Robot_Head_Cube_1_1_MeshPart0
+    4300002: Null_Robot_Head_Cube_1_1_MeshPart1
+    4300004: Cylinder_5
+    4300006: Cylinder_4
+    4300008: Cylinder_3
+    4300010: Cylinder_2
+    4300012: Sphere_1
+    4300014: Sphere
+    4300016: Cylinder_1
+    4300018: Cylinder
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

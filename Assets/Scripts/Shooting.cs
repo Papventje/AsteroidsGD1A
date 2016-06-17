@@ -28,9 +28,12 @@ public class Shooting : MonoBehaviour {
     public Transform tripleMuzzle2;
     public Transform tripleMuzzle3;
     public Transform bombDrop;
+
+    public EnemyMovement enemyMovement;
 	
     void Start()
     {
+        enemyMovement = GetComponent<EnemyMovement>();
         source = GetComponent<AudioSource>();
     }
 
@@ -99,10 +102,9 @@ public class Shooting : MonoBehaviour {
 
     IEnumerator Flash()
     {
-        yield return new WaitForSeconds(2);
-        bomb.GetComponent<MeshRenderer>().enabled = false;
+        yield return new WaitForSeconds(1);
         EnemyMovement.targeting = false;
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         EnemyMovement.targeting = true;
     }
 }

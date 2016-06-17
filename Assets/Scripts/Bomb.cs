@@ -7,26 +7,17 @@ public class Bomb : MonoBehaviour
     public Rigidbody rb;
     public float thrust = 200;
     private bool explosionCheck = false;
-    
+
+
+    public ParticleSystem explosion;
 
     void Start()
-    {
+    { 
         rb = GetComponent<Rigidbody>();
         rb.AddForce(transform.forward * thrust);
 
+        StartCoroutine(Explosion());
         explosionCheck = false;
-    }
-
-    void OnTriggerEnter(Collider Other)
-    {
-        if (Other.CompareTag("Enemy"))
-        {
-            StartCoroutine(Explosion());
-        }
-        if (Other.CompareTag("Enemy")&& explosionCheck == true)
-        {
-            Destroy(Other.gameObject);
-        }
     }
 
     void Update()
@@ -36,8 +27,10 @@ public class Bomb : MonoBehaviour
 
     IEnumerator Explosion()
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
+        explosion.Play();
         explosionCheck = true;
+        yield return new WaitForSeconds(2);
         Destroy(gameObject);
     }
 }
