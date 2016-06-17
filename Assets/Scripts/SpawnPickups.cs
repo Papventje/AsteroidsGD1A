@@ -4,7 +4,7 @@ using System.Collections;
 public class SpawnPickups : MonoBehaviour {
 
     public Transform[] spawnPoints;
-    private float spawnTime = 15f;
+    private float spawnTime = 5f;
 
     public GameObject[] Pickup;
 

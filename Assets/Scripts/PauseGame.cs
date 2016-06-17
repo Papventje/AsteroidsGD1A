@@ -1,15 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class PauseGame : MonoBehaviour {
 
     public Transform canvas;
     public Transform player;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
+    public static AudioSource source;
+
+    // Use this for initialization
+    void Start () {
+        source = GetComponent<AudioSource>();
+    }
 	
 	// Update is called once per frame
 	void Update () {

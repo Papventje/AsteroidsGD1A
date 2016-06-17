@@ -5,7 +5,8 @@ using System.Collections;
 [RequireComponent(typeof(AudioSource))]
 public class EnemyHealth : MonoBehaviour
 {
-    public AudioClip enemyDeath;
+    public AudioClip enemyHit;
+    public AudioClip Death;
     private AudioSource source;
 
     public float enemyHealth;
@@ -14,14 +15,14 @@ public class EnemyHealth : MonoBehaviour
     {
 
         source = GetComponent<AudioSource>();
-        enemyHealth = (60f + Score.scoreInt / 5);
+        enemyHealth = 60;
     }
 
     void Update()
     {
         if (enemyHealth <= 0)
         {
-            source.PlayOneShot(enemyDeath, 1f);
+            PauseGame.source.PlayOneShot(Death, 1f);
             Destroy(gameObject);
             Score.IncreaseScore(10);
         }
@@ -33,10 +34,12 @@ public class EnemyHealth : MonoBehaviour
         if (other.CompareTag("Missile"))
         {
             enemyHealth -= 10;
+            source.PlayOneShot(enemyHit, 1f);
         }
         if (other.CompareTag("Missile2"))
         {
             enemyHealth -= 15;
+            source.PlayOneShot(enemyHit, 1f);
         }
     }
     

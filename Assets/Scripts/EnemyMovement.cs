@@ -7,6 +7,8 @@ public class EnemyMovement : MonoBehaviour
     NavMeshAgent _navMeshAgent;
     GameObject _playerGameObject;
 
+    public static bool targeting = true;
+
     void Awake()
     {
         _navMeshAgent = GetComponent<NavMeshAgent>();
@@ -16,6 +18,16 @@ public class EnemyMovement : MonoBehaviour
 
     void Update()
     {
-        _navMeshAgent.SetDestination(_playerGameObject.transform.position);
+        {
+            _navMeshAgent.SetDestination(_playerGameObject.transform.position);
+        }
+        if(targeting == false)
+        {
+            _navMeshAgent.enabled = false;
+        }
+        if(targeting == true)
+        {
+            _navMeshAgent.enabled = true;
+        }
     }
 }

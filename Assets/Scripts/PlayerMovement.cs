@@ -1,19 +1,24 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class PlayerMovement : MonoBehaviour
 {
 
     public float speed;
     public bool movement = true;
 
+    public AudioClip pickup1;
+    public AudioClip pickup3;
+    public AudioClip bump;
+    private AudioSource source;
+
     private Rigidbody _rigidbody;
     private Vector3 _direction;
 
-
     void Start()
     {
-
+        source = GetComponent<AudioSource>();
     }
 
     void Awake()
@@ -48,24 +53,26 @@ public class PlayerMovement : MonoBehaviour
         _rigidbody.MovePosition(_rigidbody.position + velocity);
 
     }
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Crate"))
+        {
+            source.PlayOneShot(bump, 1f);
+        }
+    }
 
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PU1"))
         {
+            source.PlayOneShot(pickup1, 1f);
             Destroy(other.gameObject);
-            //gameObject.GetComponent<PlayerHealth>().playerLives += 1;
             PlayerHealth.playerLives += 1;
-        }
-        if (other.CompareTag("PU2"))
-        {
-            Destroy(other.gameObject);
-            //StartCoroutine(Repawnshielddinges);
         }
         if (other.CompareTag("PU3"))
         {
+            source.PlayOneShot(pickup3, 1f);
             Destroy(other.gameObject);
-            //speed += 1;
             StartCoroutine(SpeedBuff());
         }
     }

@@ -23,6 +23,14 @@ public class Missile : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        if (other.CompareTag("Enemy2"))
+        {
+            Destroy(gameObject);
+        }
+        if (other.CompareTag("Enemy3"))
+        {
+            Destroy(gameObject);
+        }
         if (other.CompareTag("Wall"))
         {
             Destroy(gameObject);

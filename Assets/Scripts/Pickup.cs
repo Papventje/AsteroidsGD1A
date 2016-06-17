@@ -7,7 +7,7 @@ public class Pickup : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Destroy(gameObject, 7.5f);
+        Destroy(gameObject, 15f);
 	}
 	
 	// Update is called once per frame

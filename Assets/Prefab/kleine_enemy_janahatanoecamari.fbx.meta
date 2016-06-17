@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: c133b7aac043ef34cb1c8c74d9a8b2bf
+timeCreated: 1466072215
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: char
+    100002: CINEMA_4D_Editor
+    100004: //RootNode
+    100006: knie_L_achter
+    100008: knie_L_voor
+    100010: knie_R_achter
+    100012: knie_R_voor
+    100014: Null
+    100016: Null_1
+    100018: Null_1_2
+    100020: Null_2
+    100022: Null_3
+    100024: Null_4
+    100026: Null_5
+    100028: Null_6
+    100030: Null_7
+    100032: RLB
+    100034: RLB_2
+    100036: RLB_3
+    100038: RLB_4
+    100040: RLB_5
+    100042: RLF
+    100044: RLF_2
+    100046: RLF_3
+    100048: RLF_4
+    100050: RLF_5
+    100052: RLF_6
+    100054: RVB
+    100056: RVB_2
+    100058: RVB_3
+    100060: Subdivision_Surface
+    100062: teen_L_achter
+    100064: teen_L_voor
+    100066: teen_R_achter
+    100068: teen_R_voor
+    100070: TORSO
+    100072: VFR
+    100074: VFR_2
+    100076: VFR_3
+    400000: char
+    400002: CINEMA_4D_Editor
+    400004: //RootNode
+    400006: knie_L_achter
+    400008: knie_L_voor
+    400010: knie_R_achter
+    400012: knie_R_voor
+    400014: Null
+    400016: Null_1
+    400018: Null_1_2
+    400020: Null_2
+    400022: Null_3
+    400024: Null_4
+    400026: Null_5
+    400028: Null_6
+    400030: Null_7
+    400032: RLB
+    400034: RLB_2
+    400036: RLB_3
+    400038: RLB_4
+    400040: RLB_5
+    400042: RLF
+    400044: RLF_2
+    400046: RLF_3
+    400048: RLF_4
+    400050: RLF_5
+    400052: RLF_6
+    400054: RVB
+    400056: RVB_2
+    400058: RVB_3
+    400060: Subdivision_Surface
+    400062: teen_L_achter
+    400064: teen_L_voor
+    400066: teen_R_achter
+    400068: teen_R_voor
+    400070: TORSO
+    400072: VFR
+    400074: VFR_2
+    400076: VFR_3
+    2300000: RLB_2
+    2300002: RLB_5
+    2300004: RLF_3
+    2300006: RLF_6
+    2300008: RVB_2
+    2300010: RVB_3
+    2300012: TORSO
+    2300014: VFR_2
+    2300016: VFR_3
+    3300000: RLB_2
+    3300002: RLB_5
+    3300004: RLF_3
+    3300006: RLF_6
+    3300008: RVB_2
+    3300010: RVB_3
+    3300012: TORSO
+    3300014: VFR_2
+    3300016: VFR_3
+    4300000: TORSO
+    4300002: RLF_3
+    4300004: VFR_2
+    4300006: RLB_2
+    4300008: RVB_2
+    4300010: RLF_6
+    4300012: VFR_3
+    4300014: RLB_5
+    4300016: RVB_3
+    7400000: Main
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Main
+      takeName: Main
+      firstFrame: 0
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: char
+        weight: 1
+      - path: CINEMA_4D_Editor
+        weight: 1
+      - path: knie_L_achter
+        weight: 1
+      - path: knie_L_voor
+        weight: 1
+      - path: knie_R_achter
+        weight: 1
+      - path: knie_R_voor
+        weight: 1
+      - path: Subdivision_Surface
+        weight: 1
+      - path: Subdivision_Surface/TORSO
+        weight: 1
+      - path: Subdivision_Surface/TORSO/Null_3
+        weight: 1
+      - path: Subdivision_Surface/TORSO/Null_3/RLB
+        weight: 1
+      - path: Subdivision_Surface/TORSO/Null_3/RLB/Null_4
+        weight: 1
+      - path: Subdivision_Surface/TORSO/Null_3/RLB/Null_4/RVB
+        weight: 1
+      - path: Subdivision_Surface/TORSO/Null_3/RLB/Null_4/RVB/Null_1
+        weight: 1
+      - path: Subdivision_Surface/TORSO/Null_3/RLB/Null_4/RVB/RVB_2
+        weight: 1
+      - path: Subdivision_Surface/TORSO/Null_3/RLB/RLB_2
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLB_3
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLB_3/RLB_4
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLB_3/RLB_4/Null_7
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLB_3/RLB_4/Null_7/RVB_3
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLB_3/RLB_4/Null_7/RVB_3/Null_1_2
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLB_3/RLB_4/RLB_5
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF/RLF_2
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF/RLF_2/Null
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF/RLF_2/Null/VFR
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF/RLF_2/Null/VFR/Null_2
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF/RLF_2/Null/VFR/VFR_2
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF/RLF_2/RLF_3
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF_4
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF_4/RLF_5
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF_4/RLF_5/Null_5
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF_4/RLF_5/Null_5/VFR_3
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF_4/RLF_5/Null_5/VFR_3/Null_6
+        weight: 1
+      - path: Subdivision_Surface/TORSO/RLF_4/RLF_5/RLF_6
+        weight: 1
+      - path: teen_L_achter
+        weight: 1
+      - path: teen_L_voor
+        weight: 1
+      - path: teen_R_achter
+        weight: 1
+      - path: teen_R_voor
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -10,7 +10,15 @@ public class Shooting : MonoBehaviour {
     public Missile missile4;
     public Bomb bomb;
 
-    public AudioClip shootLaser;
+    public ParticleSystem laser;
+    public ParticleSystem laser2;
+    public ParticleSystem laser3;
+    public ParticleSystem laser4;
+
+    public AudioClip shootLaser1;
+    public AudioClip shootLaser2;
+    public AudioClip shootLaser3;
+    public AudioClip shootLaser4;
     private AudioSource source;
 
     public Transform muzzle;
@@ -31,27 +39,26 @@ public class Shooting : MonoBehaviour {
         {
             //Debug.Log("PEWPEWPEWPEPW");
             Shoot();
-            source.PlayOneShot(shootLaser, 1f);
+            source.PlayOneShot(shootLaser1, 1f);
+            laser.Play();
         }
         if (Input.GetMouseButtonDown(0) && GameObject.Find("ScoreManager").GetComponent<Score>().unlock2 == true)
         {
             Shoot2();
-            source.PlayOneShot(shootLaser, 1f);
+            source.PlayOneShot(shootLaser2, 1f);
+            laser2.Play();
         }
         if (Input.GetMouseButtonDown(0) && GameObject.Find("ScoreManager").GetComponent<Score>().unlock3 == true)
         {
             Shoot3();
-            source.PlayOneShot(shootLaser, 1f);
+            source.PlayOneShot(shootLaser3, 1f);
+            laser3.Play();
         }
         if (Input.GetMouseButtonDown(0) && GameObject.Find("ScoreManager").GetComponent<Score>().unlock4 == true)
         {
             Shoot4();
-            source.PlayOneShot(shootLaser, 1f);
-        }
-        if (Input.GetMouseButtonDown(0) && GameObject.Find("ScoreManager").GetComponent<Score>().unlock5 == true)
-        {
-            Shoot5();
-            source.PlayOneShot(shootLaser, 1f);
+            source.PlayOneShot(shootLaser4, 1f);
+            laser4.Play();
         }
         if (Input.GetMouseButtonDown(1))
         {
@@ -87,5 +94,15 @@ public class Shooting : MonoBehaviour {
     private void Mine()
     {
         Bomb newBomb = Instantiate(bomb, bombDrop.position, bombDrop.rotation) as Bomb;
+        StartCoroutine(Flash());
+    }
+
+    IEnumerator Flash()
+    {
+        yield return new WaitForSeconds(2);
+        bomb.GetComponent<MeshRenderer>().enabled = false;
+        EnemyMovement.targeting = false;
+        yield return new WaitForSeconds(2);
+        EnemyMovement.targeting = true;
     }
 }

@@ -15,12 +15,14 @@ public class Bomb : MonoBehaviour
         rb.AddForce(transform.forward * thrust);
 
         explosionCheck = false;
-
-        StartCoroutine(Explosion());
     }
 
     void OnTriggerEnter(Collider Other)
     {
+        if (Other.CompareTag("Enemy"))
+        {
+            StartCoroutine(Explosion());
+        }
         if (Other.CompareTag("Enemy")&& explosionCheck == true)
         {
             Destroy(Other.gameObject);

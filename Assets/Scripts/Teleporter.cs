@@ -2,21 +2,27 @@
 using UnityEngine.UI;
 using System.Collections;
 
+[RequireComponent(typeof(AudioSource))]
 public class Teleporter : MonoBehaviour {
 
     private bool tpSpace = false;
 
-    public Transform tp1;
-    public Transform tp2;
-    public Transform platform1;
-    public Transform platform2;
+    public AudioClip teleport;
+    private AudioSource source;
 
+    public Transform tp1;
+    public Transform platform1;
+
+    public ParticleSystem tp;
+ 
     public Text teleportText;
 
     public PlayerMovement player;
 
     void Start()
     {
+        source = GetComponent<AudioSource>();
+
         GameObject p = GameObject.FindGameObjectWithTag("Player");
         player = p.GetComponent<PlayerMovement>();
 
@@ -29,12 +35,10 @@ public class Teleporter : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.Space))
         {
             tpSpace = true;
-            //Debug.Log("True");
         }
         if(Input.GetKeyUp(KeyCode.Space))
         {
             tpSpace = false;
-            //Debug.Log("False");
         }
 
     }
@@ -49,24 +53,11 @@ public class Teleporter : MonoBehaviour {
         {
             teleportText.enabled = false;
         }
-        if (other.CompareTag("TP2"))
-        {
-            teleportText.enabled = true;
-        }
-        else
-        {
-            teleportText.enabled = false;
-        }
         if (other.CompareTag("TP1") && tpSpace == true)
         {
-            transform.position = new Vector3(platform1.position.x, platform1.position.y + 2.67f, platform1.position.z);
-            //cooldown()
-        }
-        if (other.CompareTag("TP2") && tpSpace == true)
-        {
-            transform.position = new Vector3(platform2.position.x, platform2.position.y + 2.67f, platform2.position.z);
-            //cooldown()
-
+            transform.position = new Vector3(platform1.position.x, platform1.position.y + 0.2f, platform1.position.z);
+            source.PlayOneShot(teleport, 1f);
+            tp.Play();
         }
     }
 }
