@@ -28,11 +28,11 @@ public class Spawn : MonoBehaviour
     }
     void spawnEnemy()
     {
-        Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length - 1)], spawnpoint1.transform.position, Quaternion.identity);
+        Instantiate(enemy, spawnpoint1.transform.position, Quaternion.identity);
         CancelInvoke();
-        Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length )], spawnpoint2.transform.position, Quaternion.identity);
+        Instantiate(enemy, spawnpoint2.transform.position, Quaternion.identity);
         CancelInvoke();
-        Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length + 1)], spawnpoint3.transform.position, Quaternion.identity);
+        Instantiate(enemy, spawnpoint3.transform.position, Quaternion.identity);
         CancelInvoke();
 
     }
