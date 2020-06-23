@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Spawn : MonoBehaviour
 {
-    public GameObject[] enemies;
+    public GameObject enemy;
     public GameObject spawnpoint1;
     public GameObject spawnpoint2;
     public GameObject spawnpoint3;
@@ -19,8 +19,7 @@ public class Spawn : MonoBehaviour
 
     void Update()
     {
-        enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        amount = enemies.Length;
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
 
         if (amount != 5)
         {
