@@ -31,9 +31,9 @@ public class Spawn : MonoBehaviour
     {
         Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length - 1)], spawnpoint1.transform.position, Quaternion.identity);
         CancelInvoke();
-        Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length - 1)], spawnpoint2.transform.position, Quaternion.identity);
+        Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length )], spawnpoint2.transform.position, Quaternion.identity);
         CancelInvoke();
-        Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length - 1)], spawnpoint3.transform.position, Quaternion.identity);
+        Instantiate(enemies[UnityEngine.Random.Range(0, enemies.Length + 1)], spawnpoint3.transform.position, Quaternion.identity);
         CancelInvoke();
 
     }
